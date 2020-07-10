@@ -1,60 +1,60 @@
 .dashboard {
-    height: calc(100vh - 100px);
-    background-color: #25AAE1;
-    color: white;
-    box-sizing: border-box;
-    padding-top: 20px;
+  height: calc(100vh - 100px);
+  background-color: #25aae1;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 20px;
 }
 
 .dashboard input {
-    height: 30px;
-    width: 175px;
-    background-color: transparent;
-    color: white;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid white;
-    font-size: 20px;
-    margin-bottom: 20px;
+  height: 30px;
+  width: 175px;
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .dashboard button {
-    height: 30px;
-    width: 75px;
-    background-color: transparent;
-    color: white;
-    box-sizing: border-box;
-    border: 2px solid white;
-    border-radius: 15px;
-    font-size: 20px;
+  height: 30px;
+  width: 75px;
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
 .dashboard button:hover {
-    background-color: white;
-    color: #444445;
+  background-color: white;
+  color: #444445;
 }
 
 .dashboard h1 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .post-flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .post-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post-box button {
-    width: 150px;
+  width: 150px;
 }
 
 .post-image {
-    height: 250px;
-    margin: 20px;
-    border-radius: 10px;
+  height: 250px;
+  margin: 20px;
+  border-radius: 10px;
 }

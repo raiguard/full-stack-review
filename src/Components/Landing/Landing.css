@@ -1,70 +1,73 @@
 .landing-container {
-    height: calc(100vh - 100px);
-    background-color: #25AAE1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: calc(100vh - 100px);
+  background-color: #25aae1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .authentication-info {
-    height: 350px;
-    width: 345px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+  height: 350px;
+  width: 345px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
 .authentication-info h1 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .authentication-info input {
-    height: 30px;
-    width: 345px;
-    background-color: #25AAE1;
-    color: white;
-    border: none;
-    border-bottom: 2px solid white;
-    margin-bottom: 20px;
-    font-size: 20px;
+  height: 30px;
+  width: 345px;
+  background-color: #25aae1;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .authentication-info button {
-    height: 30px;
-    width: 350px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 15px;
-    font-size: 20px;
+  height: 30px;
+  width: 350px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
 .authentication-info button:hover {
-    background-color: white;
-    color: #444445;
+  background-color: white;
+  color: #444445;
 }
 
 .authentication-info button:active {
-    background-color: transparent;
-    color: #444445;
+  background-color: transparent;
+  color: #444445;
 }
 
 .authentication-info span {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1; /* Firefox */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
 }
-  
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
 }
