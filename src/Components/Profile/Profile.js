@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { clearUser, getUser } from "../../redux/reducer";
 import "./Profile.css";
 import axios from "axios";
 
@@ -9,6 +11,12 @@ class Profile extends Component {
       username: "",
       editView: false
     };
+  }
+
+  componentDidMount() {
+    if (!this.props.user.email) {
+      this.props.history.push("/");
+    }
   }
 
   handleInput = (val) => {
@@ -27,6 +35,16 @@ class Profile extends Component {
         this.props.getUser(res.data[0]);
         this.handleEditView();
         this.setState({ username: "" });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  handleLogout = () => {
+    axios
+      .get("/auth/logout")
+      .then(() => {
+        this.props.clearUser();
+        this.props.history.push("/");
       })
       .catch((err) => console.log(err));
   };
@@ -56,10 +74,12 @@ class Profile extends Component {
           </div>
         )}
         <h2>{this.props.user.email}</h2>
-        <button>Logout</button>
+        <button onClick={this.handleLogout}>Logout</button>
       </div>
     );
   }
 }
 
-export default Profile;
+const mapStateToProps = (reduxState) => reduxState;
+
+export default connect(mapStateToProps, { getUser, clearUser })(Profile);

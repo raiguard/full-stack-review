@@ -15,7 +15,7 @@ module.exports = {
     const hash = bcrypt.hashSync(password, bcrypt.genSaltSync());
 
     // Register the user, set it on session
-    const newUser = await db.register_user({ username, email, hash, profilePicture });
+    const newUser = await db.users.register_user({ username, email, hash, profilePicture });
     req.session.user = newUser[0];
     res.status(201).send(req.session.user);
   },
@@ -36,7 +36,7 @@ module.exports = {
     }
 
     delete foundUser[0].password;
-    req.session.user = newUser[0];
+    req.session.user = foundUser[0];
     res.status(202).send(req.session.user);
   },
   logout: async (req, res) => {

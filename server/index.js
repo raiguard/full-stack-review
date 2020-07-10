@@ -1,5 +1,3 @@
-const { default: App } = require("../src/App");
-
 // dotenv should be required at the top of the file.
 require("dotenv").config();
 // Below is some shorthand for variable declarations. If you have multiple
@@ -30,10 +28,12 @@ app.use(
 massive({
   connectionString: CONNECTION_STRING,
   ssl: { rejectUnauthorized: false }
-}).then((db) => {
-  app.set("db", db);
-  console.log("db connected");
-});
+})
+  .then((db) => {
+    app.set("db", db);
+    console.log("db connected");
+  })
+  .catch((err) => console.log(err));
 
 // auth entpoints
 app.post("/auth/register", authCtrl.register);
@@ -48,4 +48,4 @@ app.delete("/api/post/:id", mainCtrl.deletePost);
 //user endpoints
 app.put("/api/user/:id", mainCtrl.updateUsername);
 
-app.listen(SERVER_PORT, () => console.log(`Memeing on SERVER_PORT ${port}`));
+app.listen(SERVER_PORT, () => console.log(`Memeing on SERVER_PORT ${SERVER_PORT}`));
